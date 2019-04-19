@@ -1,0 +1,153 @@
+body{
+	background: #f0f0f0;
+	font-size: 15px;
+}
+.btn{
+	font-size: 14px;
+}
+header nav{
+	background: royalblue;
+	color: #fff;
+	min-height: 100px;
+	padding: 10px 0px;
+	position: relative;
+}
+header nav h1{
+	padding-top: 30px;
+	padding-left: 20px;
+	margin: 0;
+}
+header nav h1 span{
+	cursor: pointer;
+	color: #f0f0f0;
+}
+header nav h4{
+	margin: 0;
+	text-align: center;
+	font-size: 18px;
+	font-family: arial;
+	padding-top: 50px;
+}
+header ul{
+	list-style: none;
+	padding-right: 20px;
+}
+header ul li{
+	color: #444;
+	display: inline-block;
+	float: right;
+	padding: 10px 10px;
+	font-size: 16px;
+	cursor: pointer;
+}
+header ul li:hover{
+	color: #000;
+}
+.pp{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	bottom: -30px;
+	left: 20%;
+	border-radius: 50%;
+	border: 1px solid silver;
+	padding: 1px;
+	cursor: pointer;
+}
+article{
+	width: 90%;
+	margin: auto;
+}
+article section{
+	margin-top: 50px;
+	display: block;
+}
+#general{
+	color: #333;
+	border: 1px solid lightgray;
+	border-top: 0px;
+	padding-bottom:  50px;
+	border-radius: 4px 4px;
+}
+#specific{
+	color: #333;
+	border: 1px solid lightgray;
+	border-top: 0px;
+	padding-bottom:  50px;
+	border-radius: 4px 4px;
+}
+#general h3{
+	padding: 5px 20px;	
+	cursor: default;
+}
+#specific h3{
+	color: #fff;
+	padding: 5px 20px;	
+	cursor: default;
+}
+#general form{
+	margin-left: 20px;
+}
+#general textarea{
+	resize: no;
+	width: 70%;
+	min-height: 120px;
+	border: 1px solid lightgray;
+	border-radius: 10px 10px;
+	padding: 5px 5px;
+	margin-left: 20px;
+}
+#general input{
+	margin: 5px 20px;
+}
+#general input[type="text"],input[type="email"],#countryname{
+	width: 30%;
+	padding: 4px 5px;
+	border: 1px solid lightgray;
+	border-radius: 4px 4px;
+}
+#specific form{
+	text-align: center;
+}
+#specific div{
+	position: relative;
+	text-align: center;
+}
+.cp{
+	width: 60%;
+	cursor: pointer;
+}
+.prp{
+	position: absolute;
+	left: 20%;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+@media(max-width: 768px){
+	.pp{
+		width: 60px;
+		height: 60px;
+		left: 10%;
+	}
+	article{
+		width: 100%;
+	}
+	#general input[type="text"],input[type="email"]{
+	    width: 90%;
+	}
+	#general textarea{
+	    width: 90%;
+	}
+	.cp{
+	    width: 90%;
+	}
+	.prp{
+		left: 5%;
+	}
+	#editbutton,#cancelbutton,#savebutton{
+		display: block;
+		margin: 5px;
+	}
+}

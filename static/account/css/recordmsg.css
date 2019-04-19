@@ -1,0 +1,37 @@
+body{
+	background: #fff;
+	width: 100%;
+	margin: 0;
+	font-size: 14px;
+}
+header nav form{
+	text-align: center;
+	padding: 0px 0px;
+}
+header nav form input{
+	color: #222;
+	text-align: center;
+	width: 50%;
+	padding: 4px 0px;
+	border-radius: 4px 4px;
+	border: 1px solid grey;
+}
+header nav form span{
+	font-size: 20px;
+	cursor: pointer;
+	display: inline-block;
+}
+.submitform{
+	border:none;
+	background: none;
+}
+.cancel{
+	display: none;
+	font-size: 18px;
+	font-weight: bold;
+}
+@media(max-width: 768px){
+	header nav form input{
+	    width: 65%;
+	}
+}

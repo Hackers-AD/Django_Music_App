@@ -1,0 +1,44 @@
+{%extends 'account/base.php'%}
+{%load static%}{%load custom_music_tags%}
+{%block link%}
+<link rel="stylesheet" type="text/css" href="{% static 'account/css/notify.css'%}">
+<script type="text/javascript" src="{% static 'account/js/notify.js'%}"></script>
+{%endblock%}
+{%block body%}
+<body>
+	{%if newnotes%}
+	<h3><span class="glyphicon glyphicon-star"></span> New Notifications&emsp;
+		<span>{{last_notify.datetime}}</span></h3>
+	<ul class="newnotify">
+	    {%for notification in newnotes%}
+	    <li class="{{notification.noteclass}}">
+	    	<span class="glyphicon glyphicon-hand-right"></span><i> {{notification.info}}</i> 
+	    	<span class="date">{{notification.datetime}}</span>
+	    </li>
+	    {%endfor%}
+	</ul>
+	{%else%}
+	   <center>No any new Notifications</center>
+	{%endif%}
+
+	{%if oldnotes%}
+	<h3><span class="glyphicon glyphicon-check"></span> Old Notifications&emsp;
+		<span>{{last_tracked_notify.datetime}}</span></h3>
+	<ul class="oldnotify">
+	    {%for notification in oldnotes%}
+	    <li class="{{notification.noteclass}}">
+	    	<span class="glyphicon glyphicon-arrow-right"></span>&emsp;{{notification.info}} 
+	    	<span class="date">{{notification.datetime}}</span>
+	    </li>
+	    {%endfor%}
+	</ul>
+	{%else%}
+	    <center>Something is not right. Contact Admin.</center>
+	{%endif%}
+
+	{%if notifications%}
+	    {%for notication in notifications%}
+	    {%endfor%}
+	{%endif%}
+</body>
+{%endblock%}tl

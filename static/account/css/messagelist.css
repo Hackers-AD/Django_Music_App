@@ -1,0 +1,80 @@
+body{
+	padding: 0;
+	margin: auto;
+	border: 1px solid lightgrey;
+	border-bottom: none;
+	background: #f0f0f0;
+	font-size: 14px;
+}
+.btn{
+	font-size: 15px;
+}
+header nav ul{
+	list-style: none;
+}
+header nav ul li{
+	display: inline-block;
+	padding: 10px;
+}
+header nav ul li img{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	cursor: pointer;
+	border: 1px solid #fff;
+	padding: 1px;
+}
+.circle{
+    width: 12px;
+    height: 12px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    background: green;
+    float: right;
+    margin-top: 7px;
+    margin-right: 10px;
+}
+.offline{
+    width: 12px;
+    height: 12px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    background: grey;
+    float: right;
+    margin-top: 7px;
+    margin-right: 10px;
+}
+.pp{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+.msglist{
+	list-style: none;
+}
+.msglist li{
+	width: 70%;
+	margin: auto;
+    display: block;	
+    border-bottom: 1px solid lightgrey;
+    padding: 5px 5px;
+}
+.msglist li:hover{
+	background: #fff;
+	cursor: pointer;
+}
+@media(max-width: 768px){
+	header nav form{
+		width: 80%;
+	}
+	ul{
+		padding: 0;
+	}
+	ul li{
+		width: 100%;
+	}
+}

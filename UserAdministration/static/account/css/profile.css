@@ -1,0 +1,141 @@
+body{
+	font-size: 15px;
+}
+.btn{
+	font-size: 15px;
+}
+.icon-img{
+	width: 16px;
+}
+.cp{
+	top: 0px;
+	width: 100%;
+	border-radius: 5px 5px;
+}
+.pp{
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 0px;
+	left: 20px;
+	border: 1px solid lightgrey;
+	border-radius: 50%;
+	padding: 1px;
+}
+#pic{
+	width: 60%;
+	margin: auto;
+	position: relative;
+}
+#seeprofile{
+	position: relative;
+}
+#seeprofile{
+	position: relative;
+}
+#seeprofile div form{
+	text-align: center;
+}
+#seeprofile div form button{
+	margin: 5px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+#info{
+	border: 1px solid gray;
+	padding: 30px 10px;
+	color: white;
+	background: #35424a;
+	margin-left: 20px;
+	width: 40%;
+	display: inline-block;
+}
+#about{
+	border: 1px solid gray;
+	padding: 30px 10px;
+	color: white;
+	background: #35424a;
+	margin-left: 20px;
+	width: 40%;
+	display: inline-block;
+}
+#extras ul{
+	background: bcfafa;
+	list-style: none;
+}
+#extras ul li{
+	display: inline-block;
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+#extras ul li:hover{
+	cursor: pointer;
+	color: #000;
+}
+footer{
+	background: #35424a;
+	color: #fff;
+	padding: 50px 20px;
+}
+footer ul{
+	list-style: none;
+}
+footer ul li{
+	display: inline-block;
+	padding: 10px;
+	cursor: pointer;
+}
+.album{
+	list-style: none;
+}
+.album li{
+	display: inline-block;
+	padding: 10px;
+	width: 30%;
+}
+.album li img{
+	cursor: pointer;
+}
+#songdiv,#photodiv{
+	display: none;
+}
+.audioline{
+	position: absolute;
+	bottom: 0px;
+    width: 80%;
+    left: 10%;
+    margin: auto;
+    height: 3px;
+    background: crimson;
+    border: 1px solid grey;
+    margin: 10px 0px;
+    cursor: pointer;
+    display: none;
+}
+.durationscroller{
+	width: 20px;
+	height: 20px;
+	border: 1px solid grey;
+	border-radius: 50%;
+	background: grey;
+	position: absolute;
+	left: 0px;
+	top: -10px;
+	cursor: pointer;
+}
+@media(max-width: 768px){
+    #info{
+	    width: 90%;
+	    display: block;
+	}
+    #about{
+	    width: 90%;
+	    display: block;
+	}
+	#pic{
+	    width: 100%;
+	}
+}
+@media(max-width: 768px){
+}

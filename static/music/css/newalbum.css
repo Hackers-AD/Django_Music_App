@@ -1,0 +1,89 @@
+body{
+	font-size: 15px;
+	background: #f0f0f0;
+}
+.btn{
+	font-size: 15px;
+}
+.pp{
+	position: absolute;
+	bottom: 0px;
+	left: 15px;
+	width: 60px;
+	height: 60px;
+	border: 1px solid grey;
+	padding: 1px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+header{
+	position: relative;
+	background: url('../img/background/album.jpg') no-repeat center;
+	background-size: cover;
+	min-height: 360px;
+}
+header nav button{
+	position: absolute;
+	right: 30px;
+	bottom: 0px;
+}
+header div{
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+}
+#navtop{
+	padding-top: 15px;
+	padding-bottom: 30px;
+}
+#navtop h1{
+	cursor: pointer;
+}
+#uploadform{
+	width: 90%;
+	margin: auto;
+	text-align: center;
+	padding-bottom: 10px;
+}
+#choosesongbtn:hover{
+	color: #333;
+	font-weight: bold;
+}
+#uploadform input{
+	width: 30%;
+	text-align: center;
+	border: 1px solid grey;
+	padding: 4px 10px;
+	border-radius: 4px 4px;
+}
+#uploadform textarea{
+	width: 60%;
+	border: 1px solid grey;
+	padding: 4px 10px;
+	border-radius: 4px 4px;
+}
+#headerdiv h2{
+	font-weight: bold;
+	padding: 15px 0px;
+	cursor: pointer;
+}
+footer{
+	background: #222;
+	padding: 50px 0px;
+	text-align: center;
+	color: #fff;
+}
+footer h2{
+	cursor: pointer;
+}
+@media(max-width: 768px){
+	#uploadform{
+		width: 100%;
+    }
+    #uploadform textarea{
+	    width: 80%;
+	}
+	#uploadform input{
+	    width: 80%;
+	}
+}

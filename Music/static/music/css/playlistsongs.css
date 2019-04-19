@@ -1,0 +1,146 @@
+body{
+	font-size: 15px;
+	color: #000;
+	background: #f0f0f0;
+}
+.btn{
+	font-size: 15px;
+}
+
+header{
+	position: relative;
+	text-align: center;
+	padding: 15px 0px;
+}
+.pp{
+	position: absolute;
+	left: 50px;
+	top: 40px;
+	width: 50px;
+	height: 50px;
+	border: 1px solid grey;
+	border-radius: 50%;
+	padding: 1px;
+	cursor: pointer;
+}
+header nav{
+    color: #fff;
+}
+header nav a{
+	color: #fff;
+}
+header nav a:hover{
+	color: #f0f0f0;
+	text-decoration: none;
+}
+header img{
+	width: 40%;
+	cursor: pointer;
+}
+header{
+
+}
+ul{
+	
+}
+ul li{
+	
+}
+ul li:hover{
+	
+}
+#name{
+	
+}
+#number{
+	
+}
+.optspan span{
+	padding: 10px;
+}
+.optspan span:hover{
+	cursor: pointer;
+	border: 1px dashed grey;
+	border-radius: 3px 4px;
+}
+.songfeed span{
+	padding: 10px;
+}
+.songfeed span:hover{
+	cursor: pointer;
+	border: 1px dashed grey;
+	border-radius: 3px 4px;
+}
+#songname{
+	position: absolute;
+	left: 50px;
+	top: 10px;
+}
+#playlists{
+	color: #000;
+	margin-top: 20px;
+}
+#playlists ul{
+	padding: 0px;
+	list-style: none;
+}
+#playlists ul li{
+	width: 30%;
+	margin: auto;
+	display: inline-block;
+	padding: 10px 10px;
+	cursor: pointer;
+}
+.mycolor{
+	color: #3542aa;
+}
+.mycolor:hover{
+	text-decoration: underline;
+	color: blue;
+}
+.audioline{
+    width: 80%;
+    margin: auto;
+    height: 3px;
+    background: crimson;
+    border: 1px solid grey;
+    margin: 10px 0px;
+    position: absolute;
+    bottom: 0px;
+    left: 10%;
+    cursor: pointer;
+    display: none;
+}
+.durationscroller{
+	width: 20px;
+	height: 20px;
+	border: 1px solid grey;
+	border-radius: 50%;
+	background: grey;
+	position: absolute;
+	left: 0px;
+	top: -10px;
+	cursor: pointer;
+}
+footer{
+	background: #222;
+	padding: 50px 0px;
+	text-align: center;
+	color: #fff;
+}
+footer h2{
+	cursor: pointer;
+}
+@media(max-width: 768px){
+	header img{
+		width: 80%;
+	}
+    #songname{
+    	position: static;
+	}
+}
+@media(max-width: 500px){
+	.pp{
+    	left: 10px;
+	}
+}

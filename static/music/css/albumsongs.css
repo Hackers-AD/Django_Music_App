@@ -1,0 +1,243 @@
+body{
+	background: #f0f0f0;
+	font-size: 15px;
+	margin: 0px;
+}
+.btn{
+	font-size: 15px;
+}
+header{
+	position: relative;
+	text-align: center;
+}
+#head-div{
+	padding: 10px;
+}
+.icon-img{
+	width: 35px;
+	border-radius: 50%;
+}
+.bell{
+	display: inline-block;
+	font-size: 25px;
+}
+.bell span{
+	cursor: pointer;
+}
+#head-div a{
+	color: #fff;
+}
+.pp{
+	
+	left: 50px;
+	top: 40px;
+	width: 50px;
+	height: 50px;
+	border: 1px solid grey;
+	border-radius: 50%;
+	padding: 1px;
+	cursor: pointer;
+}
+header nav{
+    color: #fff;
+}
+header nav a{
+	color: #fff;
+}
+header nav a:hover{
+	color: #f0f0f0;
+	text-decoration: none;
+}
+#albuminfo{
+	color: #000;
+	font-weight: bold;
+	position: absolute;
+	top: 80px;
+	padding: 30px 0px;
+}
+#albuminfo ul{
+	padding-left: 10px;
+	list-style: none;
+}
+#albuminfo ul li{
+}
+header img{
+	width: 40%;
+	cursor: pointer;
+}
+header h2{
+}
+.likedislike{
+	list-style: none;
+}
+.likedislike li{
+	display: inline-block;
+	padding: 10px;
+}
+.likedislike li span{
+	cursor: pointer;
+	color: blue;
+	font-size: 30px;
+}
+.likedislike li span{
+}
+.likedislike form button{
+	border: none;
+	background: none;
+}
+#songlist form{
+	text-align: center;
+}
+#songlist form input{
+	width: 40%;
+	border: 1px solid grey;
+	border-radius: 5px 5px;
+	min-height: 35px;
+}
+#songlist form button{
+	border: none;
+	background: none;
+	font-size: 20px;
+}
+.commentimg{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	border: 1px solid grey;
+	padding: 1px;
+	cursor: pointer;
+}
+.optspan span{
+	padding: 10px;
+}
+.optspan span:hover{
+	cursor: pointer;
+	border: 1px dashed grey;
+	border-radius: 3px 4px;
+}
+.songfeed span{
+	padding: 10px;
+}
+.songfeed span:hover{
+	cursor: pointer;
+	border: 1px dashed grey;
+	border-radius: 3px 4px;
+}
+#songname{
+	position: absolute;
+	left: 50px;
+	top: 10px;
+}
+.audioline{
+    width: 80%;
+    margin: auto;
+    height: 3px;
+    background: crimson;
+    border: 1px solid grey;
+    margin: 10px 0px;
+    position: absolute;
+    bottom: 0px;
+    left: 10%;
+    cursor: pointer;
+    display: none;
+}
+.durationscroller{
+	width: 20px;
+	height: 20px;
+	border: 1px solid grey;
+	border-radius: 50%;
+	background: grey;
+	position: absolute;
+	left: 0px;
+	top: -10px;
+	cursor: pointer;
+}
+.commentpic{
+	width: 30%;
+	margin-left: 50px;
+	cursor: pointer;
+}
+#usercomments {
+	margin-top: 20px;
+}
+#usercomments h2{
+	width: 100%;
+	position: static;
+	color: #fff;
+}
+#usercomments ul{
+	width: 70%;
+	margin: auto;
+	list-style: none;
+	padding-left: 15px;
+}
+#usercomments ul li{
+	padding: 10px 10px;
+}
+#usercomments ul{
+	list-style: none;
+}
+#albums{
+	color: #000;
+	margin-top: 20px;
+}
+#albums ul{
+	padding: 0px;
+	list-style: none;
+}
+#albums ul li{
+	width: 30%;
+	margin: auto;
+	display: inline-block;
+	padding: 10px 10px;
+	cursor: pointer;
+}
+.mycolor{
+	color: #3542aa;
+}
+.mycolor:hover{
+	text-decoration: underline;
+	color: blue;
+}
+footer{
+	background: #222;
+	padding: 50px 0px;
+	text-align: center;
+	color: #fff;
+}
+footer h2{
+	cursor: pointer;
+}
+@media(max-width: 768px){
+	#albuminfo{
+		position: static;
+		padding: 0px;
+		margin-top: 10px;
+	}
+	header img{
+		width: 80%;
+	}
+	.commentpic{
+	    width: 60%;
+    }
+	#songlist form input{
+	    width: 60%;
+    }
+    #songname{
+    	position: static;
+	}
+	#usercomments ul{
+	    width: 100%;
+	}
+	#albums ul li{
+	    width: 45%;
+	}
+}
+@media(max-width: 500px){
+	#albums ul{
+	    text-align: center;
+	}
+	#albums ul li{
+	    width: 80%;
+	}
+}

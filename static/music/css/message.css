@@ -1,0 +1,26 @@
+body{
+	width: 100%;
+	margin: auto;
+	background: #f0f0f0;
+	font-size: 15px;
+}
+#frame iframe{
+	display: inline-block;
+}
+#friendlist{
+	width: 25%;
+}
+#conversation{
+	width:70%; 
+}
+@media(max-width: 768px){
+	#friendlist{
+		position: absolute;
+		width: 60%;
+		display: none;
+	}
+	#conversation{
+		width: 90%;
+		float: none;
+	}
+}

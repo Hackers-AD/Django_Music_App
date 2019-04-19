@@ -1,0 +1,52 @@
+body{
+	background: #fff;
+	width: 70%;
+	margin: auto;
+	text-align: center;
+	font-size: 14px;
+}
+nav{
+	padding: 0;
+	text-align: center;
+}
+.msglist{
+	list-style: none;
+	padding: 0px;
+}
+.msglist li{
+}
+#leftdiv{
+	width: 100%;
+	text-align: left;
+	margin-left: 10px;
+	float: left;
+	display: block;
+	flex: inherit;
+	margin-top: 10px;
+}
+#rightdiv{
+	width: 100%;
+	text-align: right;
+	margin-right: 10px;
+	float: right;
+	display: block;
+	margin-top: 10px;
+}
+.pp{
+	width:30px;
+	height: 30px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.msgimage{
+	width:50%;
+	cursor: pointer;
+}
+@media(max-width: 768px){
+	body{
+		width: 90%;
+	}
+}
+@media(max-width: 400px){
+	
+}

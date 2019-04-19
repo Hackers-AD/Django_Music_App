@@ -1,0 +1,189 @@
+body{
+	background: #f0f0f0;
+	font-size: 15px;
+	margin: 0px;
+}
+.btn{
+	font-size: 15px;
+}
+header{
+	position: relative;
+	text-align: center;
+}
+.icon-img{
+	width: 35px;
+	border-radius: 50%;
+}
+.bell{
+	display: inline-block;
+	font-size: 25px;
+}
+.bell span{
+	cursor: pointer;
+}
+.pp{
+	left: 50px;
+	top: 40px;
+	width: 50px;
+	height: 50px;
+	border: 1px solid grey;
+	border-radius: 50%;
+	padding: 1px;
+	cursor: pointer;
+}
+.commentimg{
+	width: 30px;
+	height: 30px;
+	border: 1px solid grey;
+	border-radius: 50%;
+	padding: 1px;
+	cursor: pointer;
+}
+header nav{
+    color: #fff;
+}
+header nav a{
+	color: #fff;
+}
+header nav a:hover{
+	color: #f0f0f0;
+	text-decoration: none;
+}
+#searchform{
+	margin-top: 30px;
+	text-align: center;
+}
+#searchform input{
+	width: 50%;
+	border: 1px solid grey;
+	padding: 4px 10px;
+	border-radius: 4px 4px;
+	text-align: center;
+}
+.songlist{
+	
+}
+.songlist ol{
+	padding: 0px;
+}
+.songlist ol li{
+	position: relative;
+	margin:0;
+	background: rgb(  245, 245, 245);
+	border: 1px solid lightgrey;
+	padding: 5px;
+}
+.songlist ol li form{
+}
+.songlist ol li form input{
+	text-align: center;
+	border: 1px solid lightgrey;
+	width: 35%;
+	padding: 4px 10px;
+	border-radius: 4px 4px;
+}
+.songlist ol li form button{
+	background: none;
+	border: none;
+}
+#pause,#volup,#voldown,#stop,#audiolength{
+	display: none;
+}
+.audioline{
+	position: absolute;
+	bottom: 0px;
+    width: 80%;
+    left: 10%;
+    margin: auto;
+    height: 3px;
+    background: crimson;
+    border: 1px solid grey;
+    margin: 10px 0px;
+    cursor: pointer;
+    display: none;
+}
+.durationscroller{
+	width: 20px;
+	height: 20px;
+	border: 1px solid grey;
+	border-radius: 50%;
+	background: grey;
+	position: absolute;
+	left: 0px;
+	top: -10px;
+	cursor: pointer;
+}
+#artistname{
+	font-size: 20px;
+	margin-left: 20px;
+}
+#songname,#optspan{
+	text-align: center;
+}
+#songname{
+	color: forestgreen;
+	font-size: 18px;
+	font-family: helvatica;
+	font-weight: bold;
+}
+#optspan{
+	font-size: 18px;
+}
+#optspan span{
+	padding: 5px 15px;
+	cursor: pointer;
+}
+#optspan span:hover{
+	border: 1px dashed #444;
+}
+.songfeed{
+	position: absolute;
+	font-size: 18px;
+	top: 5px;
+	right: 50px;
+	margin-right: 20px;
+}
+.songfeed span{
+	cursor: pointer;
+	padding: 7px;
+}
+.songfeed span:hover{
+	color: blue;
+}
+#audiolength{
+	font-size: 18px;
+	margin-left: 20px;
+	font-weight: bold;
+}
+#songreview{
+	margin-left: 20px;
+	font-size: 30px;
+	font-weight: bold;
+}
+#songreview button{
+	padding-right: 20px;
+}
+#songreview button:hover{
+	color: blue;
+}
+#commentdiv{
+	display: none;
+	text-align: center;
+}
+@media(max-width: 768px){
+	.songfeed{
+	    position: static;
+	    float: right;
+	}
+	.songlist ol li form input{
+	    width: 60%;
+	}
+	#searchform input{
+		width: 80%;
+	}
+}
+@media(max-width: 400px){
+	.songlist ol li form input{
+	    width: 50%;
+	}
+}

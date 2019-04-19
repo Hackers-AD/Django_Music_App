@@ -1,0 +1,225 @@
+{%extends 'account/base.php'%}
+{%load static%}{%load custom_music_tags%}
+{%block link%}
+<link rel="stylesheet" type="text/css" href="{% static 'account/css/addfriend.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'account/css/profile.css'%}">
+<script type="text/javascript" src="{% static 'account/js/profile.js'%}"></script>
+{%endblock%}
+{%block body%}
+<body>
+	<header>
+		<nav class="navbar navbar-inverse" style="margin:0;border-radius: 0;">
+			<ul class="message-menu">
+				<li><a href="/tubelight/"><img src="{% static 'music/img/music.png'%}"> </a></li>
+				<li>
+					<a href="/tubelight/{{request.user}}/">
+					{%if profile.profile_photo%}
+						<img src="{{profile.profile_photo.url}}">
+						<span class="glyphicon"><label></label></span>
+					{%else%}
+						<img src="{%static 'music/img/profile.png'%}">
+					{%endif%}
+				    </a>
+				</li>
+				<li onclick="window.open('/account/message/','_self')"><img src="{%static 'account/img/ficonblue.png'%}" style="border:none"></li>
+				<li onclick="window.open('/account/addfriend/','_self')"><img src="{%static 'account/img/friendadd.png'%}"></li>
+			</ul>
+		</nav>
+	</header>
+
+<div id="seeprofile">
+	<div>
+	    <div id="pic">
+		    <a href="">
+		        {%if seeprofile.cover_photo%}
+		        <img class="cp" src="{{seeprofile.cover_photo.url}}" alt="Cover Pic">
+		        {%else%}
+		        <img class="cp" src="{%static 'music/img/background/lovemusic.jpg'%}" alt="Cover Pic">
+		        {%endif%}
+		    </a>
+
+		    <p class="">
+		        <a href="">
+		            {%if seeprofile.profile_photo%}
+		                <img class="pp" src="{{seeprofile.profile_photo.url}}"  alt="Profile Pic">
+		            {%else%}
+		                <img class="pp" src="{%static 'music/img/profile.png'%}" alt="Profile Pic">
+		           {%endif%}
+		        </a>
+		    </p>
+		    <center><h2 class="navbar">{{seeprofile.user.username|upper}}'s Profile</h2></center>
+	    </div>
+	    <form action="/account/addfriend/" method="get">
+	        <a href="/account/message/{{seeprofile.user.id}}"><button class="btn btn-primary btn-lg" type="button"><img src="{%static 'account/img/ficonblack.png'%}" class="icon-img"> Message</button></a>
+	        {%if is_friend%}
+		        <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-ok"></span> Following</button>
+		    {%else%}
+		        <button class="btn btn-dark btn-lg" name="follow" value="{{seeprofile.user.id}}"><span class="glyphicon glyphicon-plus-sign"></span> Follow</button>
+		    {%endif%}
+	    </form>
+	    <br><br>
+	<div id="inline">
+	    <div id="info">
+		    <h3><span class="glyphicon glyphicon-globe"></span> Intro</h3>
+		    <ul>
+		        <li><span class="glyphicon glyphicon-envelope"></span> {{seeprofile.user.email}}</li>
+		        {%if seeprofile.birth_date%}
+		        <li>
+		        	<span class="glyphicon glyphicon-time"></span>
+		        	Born on {{seeprofile.birth_date}}
+		        </li>
+		        {%endif%}
+		        {%if seeprofile.temporary_address%}
+		        <li>
+		        	<span class="glyphicon glyphicon-map-marker"></span>
+		            Lives in {{seeprofile.temporary_address}}
+		        </li>
+		        {%endif%}
+		        {%if seeprofile.permanent_address%}
+		        <li>
+		        	<span class="glyphicon glyphicon-home"></span>
+		        	Home Town is in {{seeprofile.permanent_address}}
+		        </li>
+		        {%endif%}
+		        {%if seeprofile.education_degree%}
+		        <li>
+		        	<span class="glyphicon glyphicon-education"></span>
+		        	Studied {{seeprofile.education_degree}}
+		        </li>
+		        {%endif%}
+		        {%if seeprofile.nick_name%}<li>Nick Name is {{seeprofile.nick_name}}</li>{%endif%}
+		        {%if seeprofile.country%}
+		        <li>
+		        	<span class="glyphicon glyphicon-globe"></span>
+		        	From {{seeprofile.country}}
+		        </li>
+		        {%endif%}
+		        {%if seeprofile.religion%}
+		        <li>
+		        	Religion View is {{seeprofile.religion}}
+		        </li>
+		        {%endif%}
+		        {%if seeprofile.language_known%}
+		        <li>
+		        	Languages Known {{seeprofile.language_known}}
+		        </li>
+		        {%endif%}
+		        {%if seeprofile.interested_in%}
+		        <li>
+		        	<span class="glyphicon glyphicon-heart"></span>
+		        	Interested In {{seeprofile.interested_in}}
+		        </li>
+		        {%endif%}
+		    </ul>
+		</div>
+
+	    <div id="about">
+	    	{%if seeprofile.about_you%}
+	    	<h4>
+	    		<span class="glyphicon glyphicon-info-sign"></span>
+	    		About <a href="" style="text-transform: uppercase;text-decoration: none;">
+	    		{{seeprofile.user.username}}</a>
+	    	</h4>
+	    	<p style="margin-left: 20px;">{{seeprofile.about_you}}</p>
+	    	{%else%}
+	    	    <h4>
+		    		<span class="glyphicon glyphicon-info-sign"></span>
+		    		About <a href="" style="text-transform: uppercase;text-decoration: none;">
+		    		{{seeprofile.user.username}}</a>
+		    	</h4>
+	    	    <p style="margin-left: 20px;">Here we will display About You section of user when user write about themsef.</p>
+	    	{%endif%}
+	    </div>
+    </div>
+    <br><br>
+    <div id="extras">
+	    <ul>
+	    	<li id="album" onclick="Show('album')"><span class="glyphicon glyphicon-film"></span> Albums</li>
+	    	<li id="song" onclick="Show('song')"><span class="glyphicon glyphicon-music"></span> Songs</li>
+	    	<li id="photo" onclick="Show('photo')"><span class="glyphicon glyphicon-picture"></span> Photos</li>
+	    </ul>
+	</div><br>
+	<div id="albumdiv">
+		{%if albums%}
+		<ul class="album">
+		    {%for album in albums%}
+		    <li>
+		    	<h2 class="mycolor">
+		    		<a onclick="window.open('/album/songs/{{album.id}}/','_parent');" style="cursor: pointer;">
+		    		    <span class="glyphicon glyphicon-list"></span> {{album.album_title}}</span>
+		    		</a>
+		    	</h2><br>
+
+		    	<a onclick="window.open('/album/songs/{{album.id}}/','_parent');">
+		    		{%if album.album_logo%}<img src="{{album.album_logo.url}}" width="80%">{%else%}
+		    		    <img src="{%static 'music/img/background/album.jpg'%}" width="80%">
+		    		{%endif%}
+		    	</a><br><br>
+		    	<div><label>Genre:</label> {{album.album_genre}}</div>
+		    	<div><label>Published Date:</label> {{album.published_date}}</div>
+
+		    	<span onclick="window.open('/album/songs/{{album.id}}/','_parent');"><big>
+		    		<label class="label label-primary"> See Album</label>
+		    	</big></span>
+		    </li>
+		    {%endfor%}
+		</ul>
+		{%else%}
+		<div>
+			<h3 class="navbar">No Album Records</h3>
+			<center><button class="btn btn-success btn-lg" onclick="window.open('/createalbum/','_parent')">
+				<span class="glyphicon glyphicon-plus"></span> Create Album <span class="glyphicon glyphicon-film">
+				</span></button></center><br>
+		</div>
+		{%endif%}
+	</div>
+
+	<div id="songdiv">
+	    {%include 'music/song.php'%}
+	</div>
+
+	<div id="photodiv">
+		{%if albums%}
+			<ul class="album">
+			    {%for album in albums%}
+			    <li>
+			    	{%if album.album_logo%}
+			    	    <img src="{{album.album_logo.url}}" width="80%">
+			    	{%endif%}
+			    </li>
+			    {%endfor%}
+			</ul>
+		{%endif%}
+
+		{%if playlists%}
+			<ul class="album">
+			    {%for playlist in playlists%}
+			    <li>
+			    	{%if playlist.cover%}
+			    	    <img src="{{playlist.cover.url}}" width="80%">
+			    	{%endif%}
+			    </li>
+			    {%endfor%}
+			</ul>
+		{%endif%}
+		{%if not has_any_photo%}
+			<center>No any photo of <code><big><b>{{seeprofile.user}}</b></big></code></center><br>
+		{%endif%}
+	</div>
+
+    <footer>
+		<ul>
+			<li>Terms of Use</li>
+			<li>Privacy Policy</li>
+			<li>Feedback</li>
+			<li>Report an Issue</li>
+			<li>FAQs</li>
+		</ul>
+		<center><br>
+			<h2>&#x266C;</h2>
+			&copy;TubeLight Music 2019, All Rights Reserved.
+		</center>
+	</footer>
+</div>
+</body>
+{%endblock%}tl

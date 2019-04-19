@@ -1,0 +1,48 @@
+body{
+	background: #f0f0f0;
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+	font-size: 14px;
+}
+.msgimage-bg{
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	background: #000;
+	opacity: 0.8;
+	padding: 50px 0px;
+	padding-bottom: 200px;
+}
+.msgimage-body{
+	margin-top: 10px;
+}
+.msgimage-body img{
+	width: 60%;
+	border: 1px solid #fff;
+	padding: 1px;
+	opacity: 1.0;
+}
+.msgimage-body embed{
+	width: 60%;
+	border: 1px solid #fff;
+	padding: 1px;
+	opacity: 1.0;
+}
+.closeimg{
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	color: #fff;
+	font-size: 22px;
+	cursor: pointer;
+}
+@media(max-width: 768px){
+	.msgimage-body img{
+	    width: 80%;
+	}
+	.msgimage-body embed{
+	    width: 80%;
+	}
+}

@@ -1,0 +1,81 @@
+body{
+	background: #f0f0f0;
+	font-size: 15px;
+	margin: 0px;
+}
+.btn{
+	font-size: 15px;
+}
+header h2{
+}
+#songlist form{
+	text-align: center;
+}
+#songlist form input{
+	width: 40%;
+	border: 1px solid grey;
+	border-radius: 5px 5px;
+	min-height: 35px;
+}
+#songlist form button{
+	border: none;
+	background: none;
+	font-size: 20px;
+}
+
+.optspan span{
+	padding: 10px;
+}
+.optspan span:hover{
+	cursor: pointer;
+	border: 1px dashed grey;
+	border-radius: 3px 4px;
+}
+.songfeed span{
+	padding: 10px;
+}
+.songfeed span:hover{
+	cursor: pointer;
+	border: 1px dashed grey;
+	border-radius: 3px 4px;
+}
+#songname{
+	position: absolute;
+	left: 50px;
+	top: 5px;
+}
+.audioline{
+    width: 80%;
+    margin: auto;
+    height: 3px;
+    background: crimson;
+    border: 1px solid grey;
+    margin: 10px 0px;
+    position: absolute;
+    bottom: 0px;
+    left: 10%;
+    cursor: pointer;
+    display: none;
+}
+.durationscroller{
+	width: 20px;
+	height: 20px;
+	border: 1px solid grey;
+	border-radius: 50%;
+	background: grey;
+	position: absolute;
+	left: 0px;
+	top: -10px;
+	cursor: pointer;
+}
+@media(max-width: 768px){
+	#songlist form input{
+	    width: 60%;
+    }
+    #songname{
+    	position: static;
+	}
+}
+@media(max-width: 500px){
+	
+}

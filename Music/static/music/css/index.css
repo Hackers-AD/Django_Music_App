@@ -1,0 +1,290 @@
+body{
+	width: 100%;
+	/*font-family: helvatica,san-serif,arial;*/
+	line-height: 1.6em;
+	background: #f0f0f0;
+	margin: auto;
+	position: relative;
+	font-size: 15px;
+}
+.btn{
+	font-size: 15px;
+}
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+}
+#head-one{
+	position: relative;
+	background: url('../img/background/music.jpg') no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+	padding-bottom: 250px;
+}
+#head-two{
+	display: none;
+	position: relative;
+	background: url('../img/background/tone.jpg') no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+	padding-bottom: 250px;
+}
+#head-three{
+	display: none;
+	position: relative;
+	background: url('../img/background/heart.jpg') no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+	padding-bottom: 250px;
+}
+.circle-focused{
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: 2px solid white;
+    background: #f0f0f0;
+    cursor: pointer;
+}
+.circle-unfocused{
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: 2px solid white;
+    background: #555;
+    cursor: pointer;
+}
+.changecover div{
+	display: inline-block;
+	padding-left: 10px;
+	margin-left: 20px;
+}
+.msg{
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	float: right;
+	margin-right: 20px;
+	margin-top: 50px;
+}
+.bell{
+	font-size: 30px;
+	cursor: pointer;
+	float: right;
+	margin-right: 20px;
+	margin-top: 55px;
+	color: aqua;
+	position: relative;
+}
+.bell:hover{
+	color: #f0f0f0;
+}
+.bell div{
+	position: absolute;
+	top: -12px;
+	right: -10px;
+	font-size: 12px;
+	color: #fff;
+	font-weight: bolder;
+	border-radius: 50%;
+	padding: 0px 7px;
+	background: crimson;
+}
+.menulist{
+	list-style: none;
+	text-align: center;
+	display: none;
+}
+.menulist li{
+	display: inline-block;
+	cursor: pointer;
+	color: #f0f0f0;
+	font-weight: bold;
+	padding: 7px;
+}
+.menulist li a{
+	color: #f0f0f0;
+	text-decoration: none;
+}
+.menulist li a:hover{
+	color: #fff;
+}
+header{
+	color: #fff;
+	position: relative;
+}
+.notify{
+	position: absolute;
+	width: 80%;
+	left: 10%;
+	z-index: 1000;
+}
+.closenotify{
+	font-size: 25px;
+	font-weight: bold;
+	cursor: pointer;
+	color: #fff;
+}
+.notifydiv{
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	top: 0px;
+	background: #000;
+	opacity: 0.9;
+	z-index: 100;
+	padding: 50px 15px;
+	overflow: scroll;
+	color: #fff;
+	display: none;
+}
+header div#floatDivOne{
+	padding-left: 20px;
+	padding-top: 5px;
+}
+header div#floatDivTwo{
+	margin-top: 100px;
+	margin-right: 20px;
+	float: right;
+}
+header div#floatDivThree{
+	position: absolute;
+	bottom: 0px;
+	left: 10px;
+}
+
+#searchbar form{
+	background: #111;
+	text-align: center;
+	padding: 15px;
+}
+#searchbar form input[type="text"]{
+	width: 50%;
+	text-align: center;
+	padding: 4px;
+	border: 1px solid grey;
+	border-radius: 4px 4px;
+}
+.index-song{ 
+	margin-bottom: 50px;
+}
+#menu{
+	position: static;
+}
+.glyphicon{
+	position: static;
+}
+div#menu ul{
+	padding: 0px;
+	list-style: none;
+}
+div#menu ul li{
+	display: inline-block;
+	padding: 10px;
+	cursor: pointer;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+}
+div#menu ul li:hover{
+	color: lightgrey;
+}
+div#content{
+	width: 60%;	
+	margin: auto;
+}
+div#content iframe{
+	width: 100%;	
+	margin: auto;
+}
+#frame{
+	width: 90%;
+	margin: auto;
+	margin-bottom: 50px;
+}
+#frame iframe{
+	width: 100%;
+}
+#album,#artist,#song,#lyric{
+	display: none;
+}
+#song-upload{
+	
+}
+#song-upload h4{
+	background: #444;
+	color: #fff;
+	padding: 10px 15px;
+}
+#song-des div{
+	text-align: center;
+	position: relative;
+}
+#song-des div button#addsong{
+	padding-left: 50px;
+	padding-right: 50px;
+}
+#song-des div button#addalbum{
+	margin-top: 1px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+footer{
+	background: #333;
+	color: #fff;
+	padding: 50px 20px;
+	text-align: center;
+}
+footer ul{
+	display: inline-block;
+	list-style: none;
+	padding-right: 100px;
+	vertical-align: left;
+}
+footer ul li{
+	cursor: pointer;
+	font-size: 14px;
+}
+#social-media li{
+	display: inline-block;
+	padding: 10px;
+}
+footer ul li:hover{
+	color: #ffffaa;
+}
+@media(max-width: 768px){
+	header{
+		width:100%;
+	}
+	#song-link div{
+		width: 90%;
+		display: block;
+	}
+	#frame{
+		width: 100%;
+	}
+	.notify{
+		width: 100%;
+		left: 0px;
+	}
+	body{
+		font-size: 20px;
+	}
+}
+@media(max-width: 500px){
+	#searchbar form input[type="text"]{
+	    width: 90%;
+	}
+}

@@ -1,0 +1,48 @@
+body{
+	background: lightgrey;
+	border-radius: 5px 5px;
+	font-size: 15px;
+}
+header nav{
+	color: #000;
+	font-size: 18px;
+	padding: 5px 10px;
+}
+header nav div a{
+	color: #000;
+	font-size: 16px;
+}
+header nav div a:hover{
+	color: #333;
+	text-decoration: underline;
+}
+ul{
+	padding: 0px;
+	list-style: none;
+}
+ul li{
+	width: 30%;
+	display: inline-block;
+	padding: 10px 10px;
+	cursor: pointer;
+}
+.mycolor{
+	color: #3542aa;
+}
+.mycolor:hover{
+	text-decoration: underline;
+	color: blue;
+}
+@media(max-width: 768px){
+	ul li{
+		width: 45%;
+	}
+}
+@media(max-width: 590px){
+	body{
+		text-align: center;
+	}
+	ul li{
+		width: 80%;
+	}
+}

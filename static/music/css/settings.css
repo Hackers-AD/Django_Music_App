@@ -1,0 +1,202 @@
+body{
+	background: #f0f0f0;
+	font-size: 15px;
+}
+.btn{
+	font-size: 14px;
+}
+header nav{
+	background: royalblue;
+	color: #fff;
+	min-height: 100px;
+	padding: 10px 0px;
+	position: relative;
+	margin: 0;
+}
+header nav h1{
+	padding-top: 30px;
+	padding-left: 20px;
+	margin: 0;
+}
+header nav h1 span{
+	cursor: pointer;
+	color: #f0f0f0;
+}
+header nav h4{
+	margin: 0;
+	text-align: center;
+	font-size: 18px;
+	font-family: arial;
+	padding-top: 50px;
+}
+header ul{
+	list-style: none;
+	padding-right: 10px;
+	margin: 0;
+}
+header ul li{
+	color: #444;
+	display: inline-block;
+	float: right;
+	padding: 10px 10px;
+	font-size: 16px;
+	cursor: pointer;
+}
+header ul li:hover{
+	color: #000;
+}
+.pp{
+	position: absolute;
+	opacity: 1.0;
+	width: 100px;
+	height: 100px;
+	bottom: -30px;
+	left: 20%;
+	border-radius: 50%;
+	border: 1px solid silver;
+	padding: 1px;
+	cursor: pointer;
+}
+article{
+	width: 100%;
+	margin: auto;
+	padding-bottom: 50px;
+}
+article section{
+	padding-top: 50px;
+	display: block;
+}
+#menudiv{
+	font-size: 25px;
+	margin-top: 40px;
+	margin-left: 20px;
+	color: #444;
+}
+#menudiv span:hover{
+	color: #000;
+	cursor: pointer;
+}
+#menu{
+	position: absolute;
+	width: 30%;
+	height: 100vh;
+	background: #333;
+	color: #fff;
+	display: none;
+}
+#menu div{
+	font-size: 20px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	float: right;
+	cursor: pointer;
+}
+#menu ul{
+	list-style: none;
+}
+#menu ul li{
+	display: block;
+	cursor: pointer;
+	padding: 15px 15px; 
+}
+#menu ul li:hover{
+	color: lime;
+}
+#content{
+	width: 90%;
+	margin: auto;
+}
+#content iframe{
+	width: 100%;
+	min-height: 400px;
+}
+#messages,#musics,#notify,#profile{
+	display: none;
+}
+.bg-confirm{
+	position: absolute;
+	overflow: scroll;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.8;
+	top: 0;
+	left: 0;
+	text-align: center;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+.confirm-body{
+	opacity: 1.0;
+	width: 80%;
+	min-height: 400px;
+	background: #f0f0f0;
+	padding: 20px 0px;
+	position: relative;
+}
+.confirm-body form input{
+	width: 50%;
+	text-align: center;
+	color: #000;
+	background: #fff;
+	border: 1px solid gray;
+	border-radius: 4px 4px;
+	padding: 4px 10px;
+}
+.safeclose{
+	float: right;
+	font-size: 25px;
+	cursor: pointer;
+	margin-right: 20px;
+	opacity: 1.0;
+	color: #000;
+	font-weight: bold;
+}
+#delcancel{
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	font-size: 16px;
+}
+footer{
+	margin-top: 100px;
+	background: lightgrey;
+	color: #444;
+	padding: 50px 0px;
+}
+footer ul{
+	list-style: none;
+}
+footer ul li{
+	display: inline-block;
+	padding: 10px;
+}
+footer ul li:hover{
+	cursor: pointer;
+	color: #111;
+}
+@media(max-width: 768px){
+	.pp{
+		width: 60px;
+		height: 60px;
+		left: 10%;
+	}
+	#menu{
+		width: 51%;
+	}
+	#content{
+	    width: 100%;
+	}
+	.confirm-body{
+	    width: 100%;
+	    left: 0;
+	}
+}
+@media(max-width: 500px){
+	#menu ul{
+		padding: 0;
+	}
+}

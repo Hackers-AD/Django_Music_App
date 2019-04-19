@@ -1,0 +1,173 @@
+body{
+	width: 100%;
+	/*font-family: helvatica,san-serif,arial;*/
+	line-height: 1.6em;
+	background: rgb(245,245,245);
+	margin: 0;
+	position: relative;
+	font-size: 15px;
+}
+.btn{
+	font-size: 14px;
+}
+header{
+	width: 90%;
+	margin: auto;
+	margin-top: 30px;
+	position: relative;
+}
+#head-div{
+	padding: 10px;
+	border-bottom: 2px solid salmon;
+}
+.icon-img{
+	width: 35px;
+	border-radius: 50%;
+}
+.bell{
+	font-size: 25px;
+}
+.bell span{
+	color: #000;
+	cursor: pointer;
+}
+#head-div a{
+	color: #000;
+}
+.cp{
+	top: 0px;
+	width: 50%;
+	border-radius: 5px 5px;
+}
+.pp{
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	border: 1px solid lightgrey;
+	border-radius: 50%;
+	padding: 1px;
+}
+#changecp,#changepp{
+	margin-top: 10px;
+}
+#setnote ul{
+	list-style: none;
+	color: #444;
+}
+#setnote ul li{
+	display: inline-block;
+	padding: 10px;
+	font-size: 16px;
+}
+#setnote ul li:hover{
+	color: #111;
+	cursor: pointer;
+}
+#info{
+	padding: 10px 10px;
+	width: 40%;
+	top: 0px;
+	right: 0px;
+	position: absolute;
+}
+#menu-option{
+	font-size: 22px;
+	cursor: pointer;
+	padding: 2px 12px;
+	border: 1px solid #777;
+	border-radius: 2px 2px;
+	background: lightgrey;
+	display: none;
+}
+.menubar{
+	list-style: none;
+}
+.menubar li{
+	display: inline-block;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 16px;
+}
+.menubar li:hover{
+	color: #333;
+	cursor: pointer;
+}
+#frame{
+	width: 90%;
+	margin: auto;
+	margin-bottom: 50px;
+}
+#frame iframe{
+	width: 100%;
+}
+#likedsong,#playlist{
+	display: none;
+}
+#image-animation{
+	margin-top: 60px;
+	position: relative;
+}
+#image-animation div#animation-info{
+	position: absolute;
+	font-size: 20px;
+	color: #fff;
+	top: 60%;
+	left: 25%;
+}
+#image-animation div button{
+	padding: 4px 50px;
+}
+footer{
+	margin-top: 100px;
+	background: #35424a;
+	color: #fff;
+	padding: 50px 0px;
+}
+footer ul{
+	list-style: none;
+}
+footer ul li{
+	display: inline-block;
+	padding: 10px;
+}
+footer ul li:hover{
+	cursor: pointer;
+	color: #111;
+}
+#savebutton,#cancelbutton,#editbutton{
+	display: none;
+	margin-top: 10px; 
+}
+@media(max-width: 920px){
+	#info{
+		width: 100%;
+		margin: auto;
+		position: relative;
+		float: none;
+		display: none;
+	}
+	#menu-option{
+	    display: block;
+	}
+}
+@media(max-width: 768px){
+	.cp{
+		width: 70%;
+	}
+	footer ul li{
+	    display: block;
+	}
+	#frame{
+		width: 100%;
+	}
+}
+@media(max-width: 500px){
+	.cp{
+		width: 100%;
+	}
+	.menubar li{
+	    font-size: 15px;
+	}
+}

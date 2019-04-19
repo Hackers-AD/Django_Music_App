@@ -1,0 +1,63 @@
+body{
+	width: 100%;
+	margin: auto;
+	background: #f0f0f0;
+	position: relative;
+	font-size: 14px;
+}
+header nav ul{
+	list-style: none;
+}
+header nav ul li{
+	display: inline-block;
+	padding: 10px;
+}
+header nav ul li img{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	cursor: pointer;
+	border: 1px solid #fff;
+	padding: 1px;
+}
+.btn{
+	font-size: 14px;
+}
+.fpp{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	cursor: pointer;
+	border: 1px solid #fff;
+	padding: 1px;
+}
+#suggestfriend,#myfriend,#follower,#follow{
+	margin-top: 30px;
+}
+.fnlist{
+	list-style: none;
+}
+.fnlist li{
+	width: 20%;
+	text-align: center;
+	display: inline-block;
+	margin: 10px 10px;
+}
+#suggestfriend form button{
+	margin-top: 5px;
+}
+#myfriend form button{
+	margin-top: 5px;
+}
+#follower form button{
+	margin-top: 5px;
+}
+#follow form button{
+	margin-top: 5px;
+}
+
+@media(max-width: 768px){
+	.fnlist li{
+	    width: 90%;
+    }
+}

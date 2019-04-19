@@ -1,0 +1,35 @@
+body{
+	font-size: 16px;
+	background: #000;
+	color: #fff;
+}
+.danger{
+	color: crimson;
+}
+.info{
+	color: lime;
+}
+.warning{
+	color: orange;
+}
+.newnotify{
+	list-style: none;
+}
+.newnotify li{
+	margin-top: 5px;
+}
+.newnotify li:hover{
+	cursor: pointer;
+}
+.oldnotify{
+	list-style: none;
+}
+.oldnotify li{
+	margin-top: 5px;
+}
+.oldnotify li:hover{
+	cursor: pointer;
+}
+.date{
+	float: right;
+}

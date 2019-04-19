@@ -1,0 +1,76 @@
+body{
+	width: 100%;
+	/*font-family: helvatica,san-serif,arial;*/
+	line-height: 1.6em;
+	background: rgb(0,0,0);
+	margin: auto;
+	position: relative;
+	font-size: 15px;
+}
+.btn{
+	font-size: 15px;
+}
+header{
+	width: 90%;
+	margin: auto;
+}
+header h1{
+	padding: 15px 0px;
+	cursor: pointer;
+}
+header h4{
+	background: #444;
+	color: #fff;
+	padding: 10px 10px;
+	border-radius: 5px 5px;
+	margin-bottom: 0px;
+}
+header div{
+	width: 60%;
+	margin: auto;
+}
+header form{
+	background: #f0f0f0;
+	padding: 25px 0px;
+	padding-left: 30px;
+	padding-top: 50px;
+}
+header form label{
+	color: #444;
+}
+header form input[type="text"],input[type="password"]{
+	width: 70%;
+	background: #fff;
+	margin-bottom: 10px;
+	border: 1px solid silver;
+	color: #333;
+	padding: 3px 10px;
+}
+ul{
+	list-style: none;
+	opacity: 1.0;
+}
+ul li{
+	cursor: pointer;
+	display: inline-block;
+	padding: 10px;
+}
+ul li a{
+	color: grey;
+}
+ul li a:hover{
+	color: #f0f0f0;
+}
+#info{
+	width: 90%;
+	margin: auto;
+	margin-bottom: 30px;
+}
+@media(max-width: 768px){
+	header div{
+	    width: 100%;
+	}
+	header form input[type="text"],input[type="password"]{
+	    width: 90%;
+	}
+}

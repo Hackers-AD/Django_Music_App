@@ -1,0 +1,166 @@
+{%extends 'account/base.php'%}
+{%load static%}{%load custom_music_tags%}
+{%block link%}
+<link rel="stylesheet" type="text/css" href="{% static 'account/css/addfriend.css'%}">
+<script type="text/javascript" src="{% static 'account/js/addfriend.js'%}"></script>
+{%endblock%}
+{%block body%}
+<body>
+	<header>
+		<nav class="navbar navbar-inverse" style="margin:0;border-radius: 0;">
+			<ul class="message-menu">
+				<li><a href="/tubelight/"><img src="{% static 'music/img/music.png'%}"> </a></li>
+				<li>
+					<a href="/tubelight/{{request.user}}/">
+					{%if profile.profile_photo%}
+						<img src="{{profile.profile_photo.url}}">
+						<span class="glyphicon"><label></label></span>
+					{%else%}
+						<img src="{%static 'music/img/profile.png'%}">
+					{%endif%}
+				    </a>
+				</li>
+				<li onclick="window.open('/account/message/','_self')"><img src="{%static 'account/img/ficonblue.png'%}" style="border:none"></li>
+				<li onclick="window.open('/account/addfriend/','_self')"><img src="{%static 'account/img/friendadd.png'%}"></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="suggestfriend">
+		{%if sugusers%}
+		<h3 class="navbar"><b>Follow Suggestions</b></h3>
+		<ul class="fnlist">
+		{%for user in sugusers%}
+		{%ifequal user request.user%}
+		{%else%}
+		    <li>
+		    	{%if user|has_profile_photo:"{{user.id}}"%}
+			    	{%for profile in profiles%}
+			    	    {%ifequal user.id profile.user.id%}
+			    	        <img src="{{profile.profile_photo.url}}" class="fpp" onclick="window.open('/account/profile/{{user.id}}/','_self')">
+			    	    {%endifequal%}
+			   		{%endfor%}
+		   		{%else%}
+		   		    <img src="{%static 'music/img/profile.png'%}" class="fpp" onclick="window.open('/account/profile/{{user.id}}/','_self')">
+		   		{%endif%}
+		   		<br><b>{{user.username}}</b><br>
+		   		{%for fnuser,count in mutualfriends.items%}
+			    	{%ifequal user fnuser%}			    	
+			    	   <b>{{count}} </b>mutual friends
+			        {%endifequal%} 
+			    {%endfor%}
+		   		<form action="" method="get">
+		   			<button class="btn btn-primary" name="follow" value="{{user.id}}"><span class="glyphicon glyphicon-check"></span> Follow</button>
+		   			<button  class="btn btn-primary" onclick="window.open('/account/profile/{{user.id}}/','_self')" type="button"><span class="glyphicon glyphicon-eye-open"></span> See Profile</button>
+		   		</form>
+		    </li>
+		{%endifequal%}
+		{%endfor%}
+	    </ul>
+		{%else%}
+		{%endif%}
+	</div>
+	<div id="myfriend">
+		{%if ownfriends%}
+		<h3 class="navbar"><b>Mutual Follow (Is follower and followed)</b></h3>
+		<ul class="fnlist">
+		{%for user in ownfriends%}
+		{%ifequal user request.user%}
+		{%else%}
+		    <li>
+		    	{%if user|has_profile_photo:"{{user.id}}"%}
+			    	{%for profile in profiles%}
+			    	    {%ifequal user.id profile.user.id%}
+			    	        <img src="{{profile.profile_photo.url}}" class="fpp" onclick="window.open('/account/profile/{{user.id}}/','_self')">
+			    	    {%endifequal%}
+			   		{%endfor%}
+		   		{%else%}
+		   		    <img src="{%static 'music/img/profile.png'%}" class="fpp" onclick="window.open('/account/profile/{{user.id}}/','_self')">
+		   		{%endif%}
+		   		<br><b>{{user.username}}</b><br>
+		   		{%for fnuser,count in mutualfriends.items%}
+			    	{%ifequal user fnuser%}			    	
+			    	   <b>{{count}} </b>mutual friends
+			        {%endifequal%} 
+			    {%endfor%}
+		   		<form action="" method="get">
+		   			<button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-ok"></span> Followed</button>
+		   			<button class="btn btn-danger" name="unfollow" value="{{user.id}}"><span class="glyphicon glyphicon-trash"></span> Unfollow</button>
+		   		</form>
+		    </li>
+		{%endifequal%}
+		{%endfor%}
+	    </ul>
+		{%else%}
+		{%endif%}
+	</div>
+	<div id="follower">
+		{%if followers%}
+		<h3 class="navbar"><b>Peoples following You</b></h3>
+		<ul class="fnlist">
+		{%for user in followers%}
+		{%ifequal user request.user%}
+		{%else%}
+		    <li>
+		    	{%if user|has_profile_photo:"{{user.id}}"%}
+			    	{%for profile in profiles%}
+			    	    {%ifequal user.id profile.user.id%}
+			    	        <img src="{{profile.profile_photo.url}}" class="fpp" onclick="window.open('/account/profile/{{user.id}}/','_self')">
+			    	    {%endifequal%}
+			   		{%endfor%}
+		   		{%else%}
+		   		    <img src="{%static 'music/img/profile.png'%}" class="fpp" onclick="window.open('/account/profile/{{user.id}}/','_self')">
+		   		{%endif%}
+		   		<br><b>{{user.username}}</b><br>
+		   		{%for fnuser,count in mutualfriends.items%}
+			    	{%ifequal user fnuser%}			    	
+			    	   <b>{{count}} </b>mutual friends
+			        {%endifequal%} 
+			    {%endfor%}
+		   		<form action="" method="get">
+		   			<button class="btn btn-primary" name="approve" value="{{user.id}}"><span class="glyphicon glyphicon-ok"></span>Approve</button>
+		   			<button class="btn btn-danger" name="delrequest" value="{{user.id}}"><span class="glyphicon glyphicon-trash"></span> Delete Request</button>
+		   		</form>
+		    </li>
+		{%endifequal%}
+		{%endfor%}
+	    </ul>
+		{%else%}
+		{%endif%}
+	</div>
+	<div id="follow">
+		{%if followeds%}
+		<h3 class="navbar"><b>You are following these Peoples</b></h3>
+		<ul class="fnlist">
+		{%for user in followeds%}
+		{%ifequal user request.user%}
+		{%else%}
+		    <li>
+		    	{%if user|has_profile_photo:"{{user.id}}"%}
+			    	{%for profile in profiles%}
+			    	    {%ifequal user.id profile.user.id%}
+			    	        <img src="{{profile.profile_photo.url}}" class="fpp" onclick="window.open('/account/profile/{{user.id}}/','_self')">
+			    	    {%endifequal%}
+			   		{%endfor%}
+		   		{%else%}
+		   		    <img src="{%static 'music/img/profile.png'%}" class="fpp" onclick="window.open('/account/profile/{{user.id}}/','_self')">
+		   		{%endif%}
+		   		<br><b>{{user.username}}</b><br>
+		   		{%for fnuser,count in mutualfriends.items%}
+			    	{%ifequal user fnuser%}			    	
+			    	   <b>{{count}} </b>mutual friends
+			        {%endifequal%} 
+			    {%endfor%}
+		   		<form action="" method="">
+		   			<button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-ok"></span> Followed</button>
+		   			<button class="btn btn-warning" name="unfollow" value="{{user.id}}"><span class="glyphicon glyphicon-remove"></span> Unfollow</button>
+		   		</form>
+		    </li>
+		{%endifequal%}
+		{%endfor%}
+	    </ul>
+		{%else%}
+		{%endif%}
+	</div>
+	
+</body>
+{%endblock%}tl

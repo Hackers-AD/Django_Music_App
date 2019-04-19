@@ -1,0 +1,86 @@
+body{
+	width: 100%;
+	/*font-family: helvatica,san-serif,arial;*/
+	line-height: 1.6em;
+	background: #f0f0f0;
+	margin: auto;
+	position: relative;
+	font-size: 14px;
+}
+.btn{
+	font-size: 14px;
+}
+.danger{
+	color: red;
+}
+section{
+	position: relative;
+	width: 100%;
+	margin: auto;
+	color: #fff;
+	position: relative;
+	background: url('../img/background/musicglobe.jpeg') no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+	padding-bottom: 100px;
+}
+section h1{
+	padding: 30px 30px;
+}
+section  h3{
+	text-align: center;
+	margin-top: 20px;
+	font-size: 20px;
+}
+#btn{
+	padding-top: 10px;
+	padding-right: 10px;
+}
+section  form{
+	width: 70%;
+	margin: auto;
+	background: #f0f0f0;
+	padding-bottom: 30px;
+	color: #000;
+	border-radius: 5px 5px;
+}
+section  form div{
+	color: #fff;
+	font-size: 18px;
+}
+section  form label{
+	margin-left: 20px;
+}
+section form input[type="email"],input[type="password"],input[type="text"]{	
+	width: 80%;
+	margin-left: 20px;
+}
+section form input[type="submit"]{	
+	width: 50%;
+	margin-left: 20px;
+}
+section form p{	
+	margin-left: 20px;
+}
+ul{
+	list-style: none;
+}
+ul li{
+	cursor: pointer;
+	display: inline-block;
+	padding: 10px;
+}
+ul li a{
+	color: #fff;
+}
+ul li a:hover{
+	color: #f0f0f0;
+}
+@media(max-width: 768px){
+	section  form{
+	    width: 100%;
+    }
+	
+}

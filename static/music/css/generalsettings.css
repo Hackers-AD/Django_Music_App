@@ -1,0 +1,42 @@
+body{
+	background: #f0f0f0;
+	font-size: 15px;
+}
+.btn{
+	font-size: 14px;
+}
+.infolist{
+	list-style: none;
+}
+.infolist li{
+	display: block;
+	color: #333;
+}
+.infolist li:hover{
+}
+#accountinfoform{
+	margin-left: 15px;
+}
+#accountinfoform input{
+	width: 35%;
+	padding: 4px 10px;
+	margin-top: 5px;
+	border: 1px solid gray;
+	border-radius: 4px 4px;
+}
+#privacyform div{
+	display: inline-block;
+	margin: 10px 20px;
+}
+#privacyform div input[type="radio"]{
+	border: 1px solid lightgrey;
+	cursor: pointer;
+	margin-left: 10px;
+}
+@media(max-width: 768px){
+	#accountinfoform input{
+	    width: 80%;
+	    display: block;
+	}
+	
+}

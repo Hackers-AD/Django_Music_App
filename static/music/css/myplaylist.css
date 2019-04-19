@@ -1,0 +1,44 @@
+body{
+	font-size: 15px;
+	color: #000;
+	background: #f0f0f0;
+}
+.btn{
+	font-size: 15px;
+}
+.cover{
+	width: 40%;
+	border: 1px solid grey;
+	border-radius: 5px 5px;
+	cursor: pointer;
+}
+ul{
+	text-align: center;
+	list-style: none;
+}
+ul li{
+	position: relative;
+	width: 48%;
+	display: inline-block;
+	margin-top: 15px;
+}
+ul li:hover{
+	
+}
+#name{
+	font-size: 17px;
+	color: purple;
+}
+#number{
+	font-weight: bold;
+	color: #333;
+}
+@media(max-width: 768px){
+	ul li{
+		width: 80%;
+		display: block;
+	}
+	.cover{
+	    width: 80%;
+	}
+}
